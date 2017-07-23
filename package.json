@@ -1,0 +1,42 @@
+{
+  "name": "chatbot-boilerplate",
+  "version": "1.0.0",
+  "description": "Starting point to a custom UI chatbot. Hopefully helpful for hackatons.",
+  "main": "index.js",
+  "authors": [
+    {
+      "name": "Gabriel Age",
+      "email": "0800.grc@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Agezao/chatbot-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Agezao/chatbot-boilerplate.git/issues"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "",
+    "serve": "serve './build'",
+    "start": "npm-run-all --parallel serve dev",
+    "build": "gulp",
+    "dev": "gulp dev"
+  },
+  "dependencies": {
+    "botui": "^0.3.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "npm-run-all": "^4.0.2",
+    "serve": "^6.0.2",
+    "streamqueue": "^1.1.1"
+  }
+}
