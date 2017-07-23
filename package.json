@@ -1,5 +1,5 @@
 {
-  "name": "chatbot-boilerplate",
+  "name": "chatbot-ui-boilerplate",
   "version": "1.0.0",
   "description": "Starting point to a custom UI chatbot. Hopefully helpful for hackatons.",
   "main": "index.js",
@@ -11,10 +11,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Agezao/chatbot-boilerplate.git"
+    "url": "https://github.com/Agezao/chatbot-ui-boilerplate.git"
   },
   "bugs": {
-    "url": "https://github.com/Agezao/chatbot-boilerplate.git/issues"
+    "url": "https://github.com/Agezao/chatbot-ui-boilerplate.git/issues"
   },
   "license": "MIT",
   "scripts": {
