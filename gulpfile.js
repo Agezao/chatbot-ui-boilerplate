@@ -8,6 +8,7 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var streamqueue = require('streamqueue');
 var clean = require('gulp-clean');
+var wait = require('gulp-wait');
  
 // Style bundling
 var stylesToBundle = [
@@ -30,6 +31,7 @@ gulp.task('bundle-sass', function () {
 
 // JS building
 var scriptsToBundle = [
+  './node_modules/vue/dist/vue.min.js',
   './node_modules/botui/build/botui.js',
   './app/services/*.js',
   './app/index.js'];
@@ -49,7 +51,8 @@ gulp.task('copy-statics', function () {
 
 gulp.task('clean-build', function () {
   return gulp.src('./build/**/*.*', {read: false})
-    .pipe(clean());
+    .pipe(clean())
+    .pipe(wait(50));
 });
 
 gulp.task('watch-dev', function () {
