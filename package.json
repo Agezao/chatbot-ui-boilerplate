@@ -19,7 +19,7 @@
   "license": "MIT",
   "scripts": {
     "test": "",
-    "serve": "serve './build'",
+    "serve": "serve ./build",
     "start": "npm-run-all --parallel serve dev",
     "build": "gulp",
     "dev": "gulp dev"
