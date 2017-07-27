@@ -2,16 +2,23 @@
 
 var MessageService = function(_ThreadService) {
 	//private
+	var _httpService = new HttpService();
 
 	//public
 	var Handle = function(message) {
-		var reply = ['O seu saldo de hoje é:', 'R$ 1500,00', 'Algo mais que eu possa te ajudar?']; // processMessage(message); Call API for response
 
-		_ThreadService.AddMessage(reply);
-		_ThreadService.AddAction()
+		var messageVm = {message: message};
+		if(localStorage.context)
+			messageVm.context = JSON.parse(localStorage.context);
+
+		return _httpService.Request('/messages', 'post', messageVm)
 			.then(function(response) {
-				_ThreadService.SaveHistory(response.value, true);
-				Handle(response.value);
+				_ThreadService.AddMessage(response.data.text);
+				_ThreadService.AddAction()
+					.then(function(actionresponse) {
+						_ThreadService.SaveHistory(actionresponse.value, true);
+						Handle(actionresponse.value);
+					});
 			});
 	}
 

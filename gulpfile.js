@@ -33,6 +33,7 @@ gulp.task('bundle-sass', function () {
 var scriptsToBundle = [
   './node_modules/vue/dist/vue.min.js',
   './node_modules/botui/build/botui.js',
+  './node_modules/axios/dist/axios.min.js',
   './app/services/*.js',
   './app/index.js'];
 

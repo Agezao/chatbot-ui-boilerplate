@@ -40,7 +40,7 @@ var ThreadService = function(botCtx) {
 			if(typeof(message.human) === 'undefined')
 				message.human = isHuman;
 
-			message.delay = 800;
+			message.delay = 150;
 			if(keepHistory)
 				saveHistory(message);
 			botCtx.message.add(message);
@@ -53,9 +53,9 @@ var ThreadService = function(botCtx) {
 		if(!action)
 			action = {
 				action: {
-				  size: 30,
-				  delay: 800,
-				  placeholder: 'Write here...',
+				  size: 40,
+				  delay: 150,
+				  placeholder: 'Escreva aqui...',
 				}
 			}
 
@@ -69,7 +69,7 @@ var ThreadService = function(botCtx) {
 		if(typeof(message.human) === 'undefined')
 				message.human = isHuman;
 
-		message.delay = 800;
+		message.delay = 150;
 		saveHistory(message);
 	}
 
