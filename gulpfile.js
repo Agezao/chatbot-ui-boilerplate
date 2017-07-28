@@ -46,8 +46,11 @@ gulp.task('bundle-js', function() {
 //
 
 gulp.task('copy-statics', function () {
-  return gulp.src(['./app/index.html'])
+  gulp.src(['./app/index.html'])
     .pipe(gulp.dest('./build/'));
+
+  return gulp.src(['./app/assets/*.*'])
+    .pipe(gulp.dest('./build/assets/'));
 });
 
 gulp.task('clean-build', function () {
