@@ -1,0 +1,22 @@
+.botui-actions-container {
+  padding: 10px 5px;
+
+	* {
+		-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	}
+
+	.botui-actions-text-input {
+    width: 85%;
+    padding: 7px 7px;
+	}
+
+	.botui-actions-text-submit {
+    width: 13%;
+    border-radius: 0;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 3px;
+	}
+}
